@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <?php
+<?php
     $bmw = [
         'model' => 'X5',
         'speed' => '120',
@@ -27,9 +27,9 @@
         'year' => '2007',
     ];
 
-    echo $bmw['model'].'-'.$bmw['speed'].'-'.$bmw['doors'].'-'.$bmw['year'].PHP_EOL;
-    echo $toyota['model'].'-'.$toyota['speed'].'-'.$toyota['doors'].'-'.$toyota['year'].PHP_EOL;
-    echo $opel['model'].'-'.$opel['speed'].'-'.$opel['doors'].'-'.$opel['year'].PHP_EOL;
-    ?>
+    echo $bmw['model'].'-'.$bmw['speed'].'-'.$bmw['doors'].'-'.$bmw['year'], '<br>', PHP_EOL;
+    echo $toyota['model'].'-'.$toyota['speed'].'-'.$toyota['doors'].'-'.$toyota['year'], '<br>', PHP_EOL;
+    echo $opel['model'].'-'.$opel['speed'].'-'.$opel['doors'].'-'.$opel['year'], '<br>', PHP_EOL;
+?>
 </body>
 </html>

@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <?php
+<?php
     $day = 4;
     $out_match = match ($day)
     {
@@ -16,6 +16,6 @@
         default => 'Неизвестный день',
     };
     echo $out_match;
-    ?>
+?>
 </body>
 </html>

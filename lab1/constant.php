@@ -7,19 +7,19 @@
 </head>
 
 <body>
-    <?php
+<?php
     const VOLVO = 'Volvo 850';
     define("AUDI",'Audi 100');
     if (defined("VOLVO"))
-        echo 'Константа существует. Вот её значение: '.VOLVO.PHP_EOL;
+        echo 'Константа существует. Вот её значение: '.VOLVO, '<br>', PHP_EOL;
     else
-        echo 'Константа не существует'.PHP_EOL;
+        echo 'Константа не существует', '<br>', PHP_EOL;
     if (defined("AUDI"))
-        echo 'Константа существует. Вот её значение: '.AUDI.PHP_EOL;
+        echo 'Константа существует. Вот её значение: '.AUDI, '<br>', PHP_EOL;
     else
-        echo 'Константа не существует'.PHP_EOL;
-    echo 'Текущая версия PHP: '.PHP_VERSION.PHP_EOL;
-    echo 'Дирекория скрипта: '.__DIR__.PHP_EOL;
-    ?>
+        echo 'Константа не существует', '<br>', PHP_EOL;
+    echo 'Текущая версия PHP: '.PHP_VERSION, '<br>', PHP_EOL;
+    echo 'Дирекория скрипта: '.__DIR__, '<br>', PHP_EOL;
+?>
 </body>
 </html>

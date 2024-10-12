@@ -13,11 +13,11 @@ $age = 20;
 
 <body>
     <h1>Переменные и вывод</h1>
-    <?php
-    echo "Меня зовут: $name" . PHP_EOL;
-    echo "Мне $age лет" . PHP_EOL;
+<?php
+    echo "Меня зовут: $name", '<br>', PHP_EOL;
+    echo "Мне $age лет", '<br>',  PHP_EOL;
     var_dump($name, $age);
     unset($name, $age);
-    ?>
+?>
 </body>
 </html>

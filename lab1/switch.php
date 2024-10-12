@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <?php
+<?php
     $day = 4;
     switch ($day)
     {
@@ -25,6 +25,6 @@
         default:
             echo 'Неизвестный день';
     }
-    ?>
+?>
 </body>
 </html>
