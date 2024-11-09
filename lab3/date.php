@@ -25,13 +25,13 @@
     echo $welcome . '<br>';
     setlocale(LC_ALL, 'ru_RU.UTF-8');
     $format = datefmt_create(null, IntlDateFormatter::FULL, IntlDateFormatter::FULL, 'Europe/Moscow', IntlDateFormatter::GREGORIAN, 'dd MMMM yyyy года, EEEE HH:mm:ss');
-    echo 'Сегодня' . datefmt_format($format, $now) . '<br>';
-    $birthday_new = getdate($birthday);
-    if ($birthday < $now)
-    {
-        $birthday = mktime($birthday_new['hours'], $birthday_new['minutes'], $birthday_new['seconds'], $birthday_new['month'], $birthday_new['day'], (int)date('Y')+1);
-    }
+    echo 'Сегодня ' . datefmt_format($format, $now) . '<br>';
     $remain_birthday = $birthday - $now;
+    if ($remain_birthday < 0)
+    {
+        $birthday = mktime(0, 0, 0, 1, 1, (int)date('Y')+1);
+        $remain_birthday = $birthday - $now;
+    }
     $day_birthday = floor($remain_birthday / (60*60*24));
     $remain_birthday %= 60*60*24;
     $hour_birthday = floor($remain_birthday / (60*60));

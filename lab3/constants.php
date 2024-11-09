@@ -7,8 +7,10 @@
     <title>Все const в PHP</title>
 </head>
 <body>
+    <pre>
 <?php
     print_r(get_defined_constants(true));
 ?>
+    </pre>
 </body>
 </html>

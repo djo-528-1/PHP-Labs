@@ -7,6 +7,7 @@
     <title>Имена функций загруженного модуля</title>
 </head>
 <body>
+    <pre>
 <?php
     $loaded_extensions = get_loaded_extensions();
     foreach ($loaded_extensions as $elem)
@@ -16,5 +17,6 @@
         echo '<br>';
     }
 ?>
+    </pre>
 </body>
 </html>

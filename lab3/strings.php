@@ -24,12 +24,14 @@
         else
             echo 'Пароль недостаточно сложный!';
     }
+    checkPassword($password);
+    echo '<br>';
     $name = ucfirst($name);
     echo 'Значение переменной name после модификации: ' . $name, '<br>';
     if (filter_var($email, FILTER_VALIDATE_EMAIL))
-        echo 'Значение переменной email корректно';
+        echo 'Значение переменной email корректно ';
     else
-        echo 'Значение переменной email не корректно';
+        echo 'Значение переменной email не корректно ';
     echo htmlspecialchars($code);
 ?>
 </body>
