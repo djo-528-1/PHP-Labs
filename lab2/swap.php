@@ -9,6 +9,12 @@
 <body>
     <h1>Функция swap</h1>
 <?php
+    /**
+     * Обмен значений между двумя переменными
+     * @param int $a первая переменная
+     * @param int $b вторая переменная
+     * @return void
+     */
     function swap (int &$a, int &$b)
     {
         $temp = $a;
