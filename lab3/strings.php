@@ -26,7 +26,7 @@
     }
     checkPassword($password);
     echo '<br>';
-    $name = ucfirst($name);
+    $name = mb_strtoupper(mb_substr($name, 0, 1, null), null) . mb_substr($name, 1, null, null);
     echo 'Значение переменной name после модификации: ' . $name, '<br>';
     if (filter_var($email, FILTER_VALIDATE_EMAIL))
         echo 'Значение переменной email корректно ';
