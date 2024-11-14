@@ -61,7 +61,7 @@
 			include 'table.php';
 		break;
 		case 'calc':
-			include 'calc.php';
+			include 'calculator.php';
 		break;
 		default:
 		include 'inc/index.inc.php';
