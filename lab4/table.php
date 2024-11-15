@@ -1,6 +1,4 @@
 <?php
-    include 'inc/lib.inc.php';
-    include 'inc/data.inc.php';
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         $cols = abs((int) $_POST['cols']);
@@ -9,7 +7,7 @@
     }
     $cols = ($cols) ? $cols : 10;
     $rows = ($rows) ? $rows : 10;
-    $color = ($color) ? $color : '#ffff00';
+    $color = ($color) ? $color : '#6495ED';
 ?>
 <!-- Область основного контента -->
 <form action='<?=$_SERVER['REQUEST_URI']?>' method="POST">

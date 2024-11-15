@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 $rows = 7;
 $cols = 7;
-$color = 'red';
+$color = '#6495ED';
 $menu = [
     ['link' => 'Домой', 'href' => 'index.php',],
     ['link' => 'О нас', 'href' => 'index.php?id=about',],

@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
     define('FILENAME', 'db/users.txt');
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['fname'], $_POST['lname']))
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['fname'], $_POST['lname']) && !empty($_POST['fname']) && !empty($_POST['lname']))
     {
-        $fname = trim(htmlspecialchars($_POST['fname']));
-        $lname = trim(htmlspecialchars($_POST['lname']));
+        $fname = trim($_POST['fname']);
+        $lname = trim($_POST['lname']);
         $line = "$fname $lname\n";
         file_put_contents(FILENAME, $line, FILE_APPEND);
         header("Location: " . $_SERVER['PHP_SELF']);

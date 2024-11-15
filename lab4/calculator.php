@@ -7,7 +7,6 @@
     <title>Калькулятор</title>
 </head>
 <body>
-    <h1>Калькулятор</h1>
 <?php
     $result = null;
     $num1 = '';
@@ -48,7 +47,7 @@
     if ($result !== null)
         echo "<h3>Результат: $result</h3>";
 ?>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
         <p><label for="num1">Число 1</label><br>
         <input type="text" name="num1" id="num1" value="<?=$num1?>" required></p>
         <p><label for="operator">Оператор</label><br>

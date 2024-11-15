@@ -73,6 +73,7 @@
 	<!-- Навигация -->
 	<?php
 		include 'inc/menu.inc.php';
+		getMenu($menu);
 	?>
 	<!-- Навигация -->
 	</nav>
