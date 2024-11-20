@@ -1,13 +1,4 @@
-<?php declare(strict_types=1);?>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор</title>
-</head>
-<body>
-<?php
+<?php declare(strict_types=1);
     $result = null;
     $num1 = '';
     $num2 = '';
@@ -61,5 +52,3 @@
         <input type="text" name="num2" id="num2" value="<?=$num2?>" required></p>
         <button type="submit">Считать!</button>
     </form>
-</body>
-</html>
