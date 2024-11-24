@@ -1,4 +1,5 @@
 <?php declare(strict_types=1);
+    const COOKIE_TIME = 60*60*24;
     $visits = 1;
     $lastVisit = 'У вас пока не было посещений';
     if (isset($_COOKIE['visits']))
@@ -7,8 +8,8 @@
     {
         $lastVisit = htmlspecialchars(trim($_COOKIE['lastVisit']));
     }
-    setcookie('visits', (string) $visits, time()+(60*60*48));
-    setcookie('lastVisit', date('d-m-Y H:i:s'), time()+(60*60*72));
+    setcookie('visits', (string) $visits, time() + COOKIE_TIME);
+    setcookie('lastVisit', date('d-m-Y H:i:s'), time() + COOKIE_TIME);
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -23,7 +24,7 @@
     if ($visits == 1)
         echo 'Добро пожаловать первый раз на сайт' . '<br>';
     else
-        echo 'Ваше кол-во посещений страницы за 3-е суток: ' . $visits . '<br>';
+        echo 'Ваше кол-во посещений страницы за сутки: ' . $visits . '<br>';
     echo 'Ваше последнее посещение: ' . $lastVisit . '<br>'
 ?>
 </body>
