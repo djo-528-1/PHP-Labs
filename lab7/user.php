@@ -36,4 +36,9 @@
 
     $user = new SuperUser('Admin', 'loginAdmin', 'passwordAdmin', 'admin');
     $user->showInfo();
+
+    unset($user1);
+    unset($user2);
+    unset($user3);
+    unset($user);
 ?>

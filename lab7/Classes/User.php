@@ -2,8 +2,17 @@
     namespace Classes;
     class User
     {
+        /**
+         * @var string $name имя пользователя
+         */
         public $name;
+        /**
+         * @var string $login почта пользователя
+         */
         public $login;
+        /**
+         * @var string $password пароль пользователя
+         */
         private $password;
 
         function __construct(string $name, string $login, string $password)
@@ -17,17 +26,29 @@
         {
             echo 'Был вызван деструктор. Пользователь ' . $this->login . ' удалён<br>';
         }
-
+        
+        /**
+         * Сеттер для пароля
+         * @param string $input_password входной пароль пользователя
+         * @return void
+         */
         public function setPassword (string $input_password)
         {
             $this->password = $input_password;
         }
 
+        /**
+         * Геттер для пароля
+         * @return string возращает значение пароля пользователя
+         */
         public function getPassword ()
         {
             return $this->password;
         }
-
+        /**
+         * Вывод информации о пользователе
+         * @return void
+         */
         public function showInfo()
         {
             echo 'Имя: ' . $this->name . '<br>';
